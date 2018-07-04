@@ -1,3 +1,7 @@
+
+## 实现效果【Effect】
+
+功能效果是这样的：
 ![Untitled2.gif](https://upload-images.jianshu.io/upload_images/4320229-c856db42b18d8045.gif?imageMogr2/auto-orient/strip)
 
 ##基本功能
