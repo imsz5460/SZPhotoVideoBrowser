@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		713D1FF427FC7CC8BDCE8BCF /* Pods_SZPhotoVideoBrowserDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BE02B8999FD10C823935DE /* Pods_SZPhotoVideoBrowserDemo.framework */; };
+		B596F21A20ECB48C00DC28EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B596F21920ECB48C00DC28EE /* Assets.xcassets */; };
+		B596F21D20ECB48C00DC28EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B596F21B20ECB48C00DC28EE /* LaunchScreen.storyboard */; };
+		B596F22020ECB48C00DC28EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F21F20ECB48C00DC28EE /* main.m */; };
+		B596F22A20ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F22920ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.m */; };
+		B596F23520ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F23420ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.m */; };
+		B596F29120ECB4FD00DC28EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24420ECB4FC00DC28EE /* AppDelegate.m */; };
+		B596F29220ECB4FD00DC28EE /* GKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24820ECB4FC00DC28EE /* GKBaseViewController.m */; };
+		B596F29320ECB4FD00DC28EE /* GKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24B20ECB4FC00DC28EE /* GKMainViewController.m */; };
+		B596F29420ECB4FD00DC28EE /* GKTest01ViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24D20ECB4FC00DC28EE /* GKTest01ViewCell.m */; };
+		B596F29520ECB4FD00DC28EE /* GKTest01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */; };
+		B596F29620ECB4FD00DC28EE /* UIView+GKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */; };
+		B596F2A320ECB4FD00DC28EE /* AILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27420ECB4FD00DC28EE /* AILoadingView.m */; };
+		B596F2A420ECB4FD00DC28EE /* CLGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */; };
+		B596F2A520ECB4FD00DC28EE /* CLPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */; };
+		B596F2A620ECB4FD00DC28EE /* CLPlayerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */; };
+		B596F2A720ECB4FD00DC28EE /* CLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */; };
+		B596F2A820ECB4FD00DC28EE /* CLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27D20ECB4FD00DC28EE /* CLSlider.m */; };
+		B596F2A920ECB4FD00DC28EE /* GKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28120ECB4FD00DC28EE /* GKLoadingView.m */; };
+		B596F2AA20ECB4FD00DC28EE /* GKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28320ECB4FD00DC28EE /* GKPhoto.m */; };
+		B596F2AB20ECB4FD00DC28EE /* GKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */; };
+		B596F2AC20ECB4FD00DC28EE /* GKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */; };
+		B596F2AD20ECB4FD00DC28EE /* GKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28920ECB4FD00DC28EE /* GKPhotoView.m */; };
+		B596F2AE20ECB4FD00DC28EE /* GKWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */; };
+		B596F2AF20ECB4FD00DC28EE /* SZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28E20ECB4FD00DC28EE /* SZScrollView.m */; };
+		B596F2B020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B596F22620ECB48C00DC28EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B596F20520ECB48100DC28EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B596F20C20ECB48100DC28EE;
+			remoteInfo = SZPhotoVideoBrowserDemo;
+		};
+		B596F23120ECB48C00DC28EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B596F20520ECB48100DC28EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B596F20C20ECB48100DC28EE;
+			remoteInfo = SZPhotoVideoBrowserDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		123F66A0B23BF87B9A9D1285 /* Pods-SZPhotoVideoBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZPhotoVideoBrowserDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A7BE02B8999FD10C823935DE /* Pods_SZPhotoVideoBrowserDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SZPhotoVideoBrowserDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B596F20D20ECB48100DC28EE /* SZPhotoVideoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZPhotoVideoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B596F21920ECB48C00DC28EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B596F21C20ECB48C00DC28EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B596F21E20ECB48C00DC28EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B596F21F20ECB48C00DC28EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B596F22520ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZPhotoVideoBrowserDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B596F22920ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPhotoVideoBrowserDemoTests.m; sourceTree = "<group>"; };
+		B596F22B20ECB48C00DC28EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B596F23020ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZPhotoVideoBrowserDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B596F23420ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPhotoVideoBrowserDemoUITests.m; sourceTree = "<group>"; };
+		B596F23620ECB48C00DC28EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B596F24320ECB4FC00DC28EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B596F24420ECB4FC00DC28EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B596F24720ECB4FC00DC28EE /* GKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaseViewController.h; sourceTree = "<group>"; };
+		B596F24820ECB4FC00DC28EE /* GKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaseViewController.m; sourceTree = "<group>"; };
+		B596F24A20ECB4FC00DC28EE /* GKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKMainViewController.h; sourceTree = "<group>"; };
+		B596F24B20ECB4FC00DC28EE /* GKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKMainViewController.m; sourceTree = "<group>"; };
+		B596F24C20ECB4FC00DC28EE /* GKTest01ViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTest01ViewCell.h; sourceTree = "<group>"; };
+		B596F24D20ECB4FC00DC28EE /* GKTest01ViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTest01ViewCell.m; sourceTree = "<group>"; };
+		B596F24E20ECB4FC00DC28EE /* GKTest01ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKTest01ViewController.h; sourceTree = "<group>"; };
+		B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTest01ViewController.m; sourceTree = "<group>"; };
+		B596F25220ECB4FC00DC28EE /* UIView+GKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GKFrame.h"; sourceTree = "<group>"; };
+		B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GKFrame.m"; sourceTree = "<group>"; };
+		B596F27320ECB4FD00DC28EE /* AILoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AILoadingView.h; sourceTree = "<group>"; };
+		B596F27420ECB4FD00DC28EE /* AILoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AILoadingView.m; sourceTree = "<group>"; };
+		B596F27520ECB4FD00DC28EE /* CLGCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLGCDTimerManager.h; sourceTree = "<group>"; };
+		B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLGCDTimerManager.m; sourceTree = "<group>"; };
+		B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLPlayer.bundle; sourceTree = "<group>"; };
+		B596F27820ECB4FD00DC28EE /* CLPlayerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPlayerMaskView.h; sourceTree = "<group>"; };
+		B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPlayerMaskView.m; sourceTree = "<group>"; };
+		B596F27A20ECB4FD00DC28EE /* CLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPlayerView.h; sourceTree = "<group>"; };
+		B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPlayerView.m; sourceTree = "<group>"; };
+		B596F27C20ECB4FD00DC28EE /* CLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSlider.h; sourceTree = "<group>"; };
+		B596F27D20ECB4FD00DC28EE /* CLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSlider.m; sourceTree = "<group>"; };
+		B596F28020ECB4FD00DC28EE /* GKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLoadingView.h; sourceTree = "<group>"; };
+		B596F28120ECB4FD00DC28EE /* GKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoadingView.m; sourceTree = "<group>"; };
+		B596F28220ECB4FD00DC28EE /* GKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhoto.h; sourceTree = "<group>"; };
+		B596F28320ECB4FD00DC28EE /* GKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhoto.m; sourceTree = "<group>"; };
+		B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GKPhotoBrowser.bundle; sourceTree = "<group>"; };
+		B596F28520ECB4FD00DC28EE /* GKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowser.h; sourceTree = "<group>"; };
+		B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoBrowser.m; sourceTree = "<group>"; };
+		B596F28720ECB4FD00DC28EE /* GKPhotoBrowserConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowserConfigure.h; sourceTree = "<group>"; };
+		B596F28820ECB4FD00DC28EE /* GKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoView.h; sourceTree = "<group>"; };
+		B596F28920ECB4FD00DC28EE /* GKPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoView.m; sourceTree = "<group>"; };
+		B596F28A20ECB4FD00DC28EE /* GKWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageManager.h; sourceTree = "<group>"; };
+		B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWebImageManager.m; sourceTree = "<group>"; };
+		B596F28C20ECB4FD00DC28EE /* GKWebImageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageProtocol.h; sourceTree = "<group>"; };
+		B596F28D20ECB4FD00DC28EE /* SZScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZScrollView.h; sourceTree = "<group>"; };
+		B596F28E20ECB4FD00DC28EE /* SZScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZScrollView.m; sourceTree = "<group>"; };
+		B596F28F20ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKGestureHandle.h"; sourceTree = "<group>"; };
+		B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKGestureHandle.m"; sourceTree = "<group>"; };
+		B596F2B120ECB65D00DC28EE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C52D1E4315827C2936B11915 /* Pods-SZPhotoVideoBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZPhotoVideoBrowserDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B596F20A20ECB48100DC28EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713D1FF427FC7CC8BDCE8BCF /* Pods_SZPhotoVideoBrowserDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22220ECB48C00DC28EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22D20ECB48C00DC28EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6981509072D4BD0E4DABCB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7BE02B8999FD10C823935DE /* Pods_SZPhotoVideoBrowserDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B596F20420ECB48100DC28EE = {
+			isa = PBXGroup;
+			children = (
+				B596F20F20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */,
+				B596F22820ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests */,
+				B596F23320ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests */,
+				B596F20E20ECB48100DC28EE /* Products */,
+				F392DCC32299ADBE4018F43F /* Pods */,
+				6981509072D4BD0E4DABCB3A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B596F20E20ECB48100DC28EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B596F20D20ECB48100DC28EE /* SZPhotoVideoBrowserDemo.app */,
+				B596F22520ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.xctest */,
+				B596F23020ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B596F20F20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B596F24220ECB4FC00DC28EE /* Classes */,
+				B596F27220ECB4FD00DC28EE /* CLPlayer */,
+				B596F27E20ECB4FD00DC28EE /* GKPhotoBrowser */,
+				B596F21920ECB48C00DC28EE /* Assets.xcassets */,
+				B596F21B20ECB48C00DC28EE /* LaunchScreen.storyboard */,
+				B596F21E20ECB48C00DC28EE /* Info.plist */,
+				B596F2B120ECB65D00DC28EE /* PrefixHeader.pch */,
+				B596F21F20ECB48C00DC28EE /* main.m */,
+			);
+			path = SZPhotoVideoBrowserDemo;
+			sourceTree = "<group>";
+		};
+		B596F22820ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B596F22920ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.m */,
+				B596F22B20ECB48C00DC28EE /* Info.plist */,
+			);
+			path = SZPhotoVideoBrowserDemoTests;
+			sourceTree = "<group>";
+		};
+		B596F23320ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B596F23420ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.m */,
+				B596F23620ECB48C00DC28EE /* Info.plist */,
+			);
+			path = SZPhotoVideoBrowserDemoUITests;
+			sourceTree = "<group>";
+		};
+		B596F24220ECB4FC00DC28EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B596F24320ECB4FC00DC28EE /* AppDelegate.h */,
+				B596F24420ECB4FC00DC28EE /* AppDelegate.m */,
+				B596F24520ECB4FC00DC28EE /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B596F24520ECB4FC00DC28EE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B596F24620ECB4FC00DC28EE /* GIF */,
+				B596F24720ECB4FC00DC28EE /* GKBaseViewController.h */,
+				B596F24820ECB4FC00DC28EE /* GKBaseViewController.m */,
+				B596F24920ECB4FC00DC28EE /* GKCategory */,
+				B596F24A20ECB4FC00DC28EE /* GKMainViewController.h */,
+				B596F24B20ECB4FC00DC28EE /* GKMainViewController.m */,
+				B596F24C20ECB4FC00DC28EE /* GKTest01ViewCell.h */,
+				B596F24D20ECB4FC00DC28EE /* GKTest01ViewCell.m */,
+				B596F24E20ECB4FC00DC28EE /* GKTest01ViewController.h */,
+				B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */,
+				B596F25020ECB4FC00DC28EE /* Jianshu */,
+				B596F25120ECB4FC00DC28EE /* Toutiao */,
+				B596F25220ECB4FC00DC28EE /* UIView+GKFrame.h */,
+				B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */,
+				B596F25420ECB4FC00DC28EE /* WeChat */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B596F24620ECB4FC00DC28EE /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
+		B596F24920ECB4FC00DC28EE /* GKCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GKCategory;
+			sourceTree = "<group>";
+		};
+		B596F25020ECB4FC00DC28EE /* Jianshu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jianshu;
+			sourceTree = "<group>";
+		};
+		B596F25120ECB4FC00DC28EE /* Toutiao */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toutiao;
+			sourceTree = "<group>";
+		};
+		B596F25420ECB4FC00DC28EE /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		B596F27220ECB4FD00DC28EE /* CLPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B596F27320ECB4FD00DC28EE /* AILoadingView.h */,
+				B596F27420ECB4FD00DC28EE /* AILoadingView.m */,
+				B596F27520ECB4FD00DC28EE /* CLGCDTimerManager.h */,
+				B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */,
+				B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */,
+				B596F27820ECB4FD00DC28EE /* CLPlayerMaskView.h */,
+				B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */,
+				B596F27A20ECB4FD00DC28EE /* CLPlayerView.h */,
+				B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */,
+				B596F27C20ECB4FD00DC28EE /* CLSlider.h */,
+				B596F27D20ECB4FD00DC28EE /* CLSlider.m */,
+			);
+			path = CLPlayer;
+			sourceTree = "<group>";
+		};
+		B596F27E20ECB4FD00DC28EE /* GKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B596F27F20ECB4FD00DC28EE /* GKLoadingView */,
+				B596F28220ECB4FD00DC28EE /* GKPhoto.h */,
+				B596F28320ECB4FD00DC28EE /* GKPhoto.m */,
+				B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */,
+				B596F28520ECB4FD00DC28EE /* GKPhotoBrowser.h */,
+				B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */,
+				B596F28720ECB4FD00DC28EE /* GKPhotoBrowserConfigure.h */,
+				B596F28820ECB4FD00DC28EE /* GKPhotoView.h */,
+				B596F28920ECB4FD00DC28EE /* GKPhotoView.m */,
+				B596F28A20ECB4FD00DC28EE /* GKWebImageManager.h */,
+				B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */,
+				B596F28C20ECB4FD00DC28EE /* GKWebImageProtocol.h */,
+				B596F28D20ECB4FD00DC28EE /* SZScrollView.h */,
+				B596F28E20ECB4FD00DC28EE /* SZScrollView.m */,
+				B596F28F20ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.h */,
+				B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */,
+			);
+			path = GKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		B596F27F20ECB4FD00DC28EE /* GKLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				B596F28020ECB4FD00DC28EE /* GKLoadingView.h */,
+				B596F28120ECB4FD00DC28EE /* GKLoadingView.m */,
+			);
+			path = GKLoadingView;
+			sourceTree = "<group>";
+		};
+		F392DCC32299ADBE4018F43F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C52D1E4315827C2936B11915 /* Pods-SZPhotoVideoBrowserDemo.debug.xcconfig */,
+				123F66A0B23BF87B9A9D1285 /* Pods-SZPhotoVideoBrowserDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B596F20C20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B596F23920ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemo" */;
+			buildPhases = (
+				709CA08192C487D027CECF32 /* [CP] Check Pods Manifest.lock */,
+				B596F20920ECB48100DC28EE /* Sources */,
+				B596F20A20ECB48100DC28EE /* Frameworks */,
+				B596F20B20ECB48100DC28EE /* Resources */,
+				AD0193C2BF8AAC4BAD8F2B53 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SZPhotoVideoBrowserDemo;
+			productName = SZPhotoVideoBrowserDemo;
+			productReference = B596F20D20ECB48100DC28EE /* SZPhotoVideoBrowserDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B596F22420ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B596F23C20ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemoTests" */;
+			buildPhases = (
+				B596F22120ECB48C00DC28EE /* Sources */,
+				B596F22220ECB48C00DC28EE /* Frameworks */,
+				B596F22320ECB48C00DC28EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B596F22720ECB48C00DC28EE /* PBXTargetDependency */,
+			);
+			name = SZPhotoVideoBrowserDemoTests;
+			productName = SZPhotoVideoBrowserDemoTests;
+			productReference = B596F22520ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B596F22F20ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B596F23F20ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemoUITests" */;
+			buildPhases = (
+				B596F22C20ECB48C00DC28EE /* Sources */,
+				B596F22D20ECB48C00DC28EE /* Frameworks */,
+				B596F22E20ECB48C00DC28EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B596F23220ECB48C00DC28EE /* PBXTargetDependency */,
+			);
+			name = SZPhotoVideoBrowserDemoUITests;
+			productName = SZPhotoVideoBrowserDemoUITests;
+			productReference = B596F23020ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B596F20520ECB48100DC28EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = sz;
+				TargetAttributes = {
+					B596F20C20ECB48100DC28EE = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					B596F22420ECB48C00DC28EE = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = B596F20C20ECB48100DC28EE;
+					};
+					B596F22F20ECB48C00DC28EE = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = B596F20C20ECB48100DC28EE;
+					};
+				};
+			};
+			buildConfigurationList = B596F20820ECB48100DC28EE /* Build configuration list for PBXProject "SZPhotoVideoBrowserDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B596F20420ECB48100DC28EE;
+			productRefGroup = B596F20E20ECB48100DC28EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B596F20C20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */,
+				B596F22420ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests */,
+				B596F22F20ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B596F20B20ECB48100DC28EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B596F21D20ECB48C00DC28EE /* LaunchScreen.storyboard in Resources */,
+				B596F21A20ECB48C00DC28EE /* Assets.xcassets in Resources */,
+				B596F2AB20ECB4FD00DC28EE /* GKPhotoBrowser.bundle in Resources */,
+				B596F2A520ECB4FD00DC28EE /* CLPlayer.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22320ECB48C00DC28EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22E20ECB48C00DC28EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		709CA08192C487D027CECF32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SZPhotoVideoBrowserDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD0193C2BF8AAC4BAD8F2B53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GKCover/GKCover.framework",
+				"${BUILT_PRODUCTS_DIR}/GKNavigationBarViewController/GKNavigationBarViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GKCover.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GKNavigationBarViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B596F20920ECB48100DC28EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B596F2A620ECB4FD00DC28EE /* CLPlayerMaskView.m in Sources */,
+				B596F29120ECB4FD00DC28EE /* AppDelegate.m in Sources */,
+				B596F22020ECB48C00DC28EE /* main.m in Sources */,
+				B596F2AC20ECB4FD00DC28EE /* GKPhotoBrowser.m in Sources */,
+				B596F29220ECB4FD00DC28EE /* GKBaseViewController.m in Sources */,
+				B596F2AF20ECB4FD00DC28EE /* SZScrollView.m in Sources */,
+				B596F2A320ECB4FD00DC28EE /* AILoadingView.m in Sources */,
+				B596F2AA20ECB4FD00DC28EE /* GKPhoto.m in Sources */,
+				B596F2AE20ECB4FD00DC28EE /* GKWebImageManager.m in Sources */,
+				B596F29420ECB4FD00DC28EE /* GKTest01ViewCell.m in Sources */,
+				B596F29520ECB4FD00DC28EE /* GKTest01ViewController.m in Sources */,
+				B596F2A920ECB4FD00DC28EE /* GKLoadingView.m in Sources */,
+				B596F2A720ECB4FD00DC28EE /* CLPlayerView.m in Sources */,
+				B596F29620ECB4FD00DC28EE /* UIView+GKFrame.m in Sources */,
+				B596F2AD20ECB4FD00DC28EE /* GKPhotoView.m in Sources */,
+				B596F2A420ECB4FD00DC28EE /* CLGCDTimerManager.m in Sources */,
+				B596F2B020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m in Sources */,
+				B596F29320ECB4FD00DC28EE /* GKMainViewController.m in Sources */,
+				B596F2A820ECB4FD00DC28EE /* CLSlider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22120ECB48C00DC28EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B596F22A20ECB48C00DC28EE /* SZPhotoVideoBrowserDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B596F22C20ECB48C00DC28EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B596F23520ECB48C00DC28EE /* SZPhotoVideoBrowserDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B596F22720ECB48C00DC28EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B596F20C20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */;
+			targetProxy = B596F22620ECB48C00DC28EE /* PBXContainerItemProxy */;
+		};
+		B596F23220ECB48C00DC28EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B596F20C20ECB48100DC28EE /* SZPhotoVideoBrowserDemo */;
+			targetProxy = B596F23120ECB48C00DC28EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B596F21B20ECB48C00DC28EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B596F21C20ECB48C00DC28EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B596F23720ECB48C00DC28EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B596F23820ECB48C00DC28EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B596F23A20ECB48C00DC28EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52D1E4315827C2936B11915 /* Pods-SZPhotoVideoBrowserDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7B837RTMK;
+				GCC_PREFIX_HEADER = "/Users/tuliu-employee/Desktop/SZPhotoVideoBrowserDemo/SZPhotoVideoBrowserDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B596F23B20ECB48C00DC28EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 123F66A0B23BF87B9A9D1285 /* Pods-SZPhotoVideoBrowserDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7B837RTMK;
+				GCC_PREFIX_HEADER = "/Users/tuliu-employee/Desktop/SZPhotoVideoBrowserDemo/SZPhotoVideoBrowserDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B596F23D20ECB48C00DC28EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZPhotoVideoBrowserDemo.app/SZPhotoVideoBrowserDemo";
+			};
+			name = Debug;
+		};
+		B596F23E20ECB48C00DC28EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZPhotoVideoBrowserDemo.app/SZPhotoVideoBrowserDemo";
+			};
+			name = Release;
+		};
+		B596F24020ECB48C00DC28EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SZPhotoVideoBrowserDemo;
+			};
+			name = Debug;
+		};
+		B596F24120ECB48C00DC28EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SZPhotoVideoBrowserDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SZPhotoVideoBrowserDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B596F20820ECB48100DC28EE /* Build configuration list for PBXProject "SZPhotoVideoBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B596F23720ECB48C00DC28EE /* Debug */,
+				B596F23820ECB48C00DC28EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B596F23920ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B596F23A20ECB48C00DC28EE /* Debug */,
+				B596F23B20ECB48C00DC28EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B596F23C20ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B596F23D20ECB48C00DC28EE /* Debug */,
+				B596F23E20ECB48C00DC28EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B596F23F20ECB48C00DC28EE /* Build configuration list for PBXNativeTarget "SZPhotoVideoBrowserDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B596F24020ECB48C00DC28EE /* Debug */,
+				B596F24120ECB48C00DC28EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B596F20520ECB48100DC28EE /* Project object */;
+}
