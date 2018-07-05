@@ -212,58 +212,18 @@
 		B596F24520ECB4FC00DC28EE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B596F24620ECB4FC00DC28EE /* GIF */,
 				B596F24720ECB4FC00DC28EE /* GKBaseViewController.h */,
 				B596F24820ECB4FC00DC28EE /* GKBaseViewController.m */,
-				B596F24920ECB4FC00DC28EE /* GKCategory */,
 				B596F24A20ECB4FC00DC28EE /* GKMainViewController.h */,
 				B596F24B20ECB4FC00DC28EE /* GKMainViewController.m */,
 				B596F24C20ECB4FC00DC28EE /* GKTest01ViewCell.h */,
 				B596F24D20ECB4FC00DC28EE /* GKTest01ViewCell.m */,
 				B596F24E20ECB4FC00DC28EE /* GKTest01ViewController.h */,
 				B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */,
-				B596F25020ECB4FC00DC28EE /* Jianshu */,
-				B596F25120ECB4FC00DC28EE /* Toutiao */,
 				B596F25220ECB4FC00DC28EE /* UIView+GKFrame.h */,
 				B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */,
-				B596F25420ECB4FC00DC28EE /* WeChat */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		B596F24620ECB4FC00DC28EE /* GIF */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GIF;
-			sourceTree = "<group>";
-		};
-		B596F24920ECB4FC00DC28EE /* GKCategory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GKCategory;
-			sourceTree = "<group>";
-		};
-		B596F25020ECB4FC00DC28EE /* Jianshu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Jianshu;
-			sourceTree = "<group>";
-		};
-		B596F25120ECB4FC00DC28EE /* Toutiao */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Toutiao;
-			sourceTree = "<group>";
-		};
-		B596F25420ECB4FC00DC28EE /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WeChat;
 			sourceTree = "<group>";
 		};
 		B596F27220ECB4FD00DC28EE /* CLPlayer */ = {
@@ -692,7 +652,10 @@
 				GCC_PREFIX_HEADER = "/Users/tuliu-employee/Desktop/SZPhotoVideoBrowserDemo/SZPhotoVideoBrowserDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,7 +672,10 @@
 				GCC_PREFIX_HEADER = "/Users/tuliu-employee/Desktop/SZPhotoVideoBrowserDemo/SZPhotoVideoBrowserDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -722,7 +688,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -736,7 +706,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -749,7 +723,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -762,7 +740,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SZPhotoVideoBrowserDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sz.SZPhotoVideoBrowserDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

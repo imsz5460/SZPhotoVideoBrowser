@@ -43,18 +43,18 @@
     self.dataList = @[
                       @{@"text"  : @"TableViewCell单图none",
                         @"class" : @"GKTest01ViewController"},
-                      @{@"text"  : @"TableViewCell多图zoom",
-                        @"class" : @"GKTest02ViewController"},
-                      @{@"text"  : @"TableViewCell多图push",
-                        @"class" : @"GKTest03ViewController"},
-                      @{@"text"  : @"微信朋友圈",
-                        @"class" : @"GKTimeLineViewController"},
-                      @{@"text"  : @"今日头条",
-                        @"class" : @"GKToutiaoViewController"},
-                      @{@"text"  : @"简书",
-                        @"class" : @"GKJianshuViewController"},
-                      @{@"text"  : @"GIF图片",
-                        @"class" : @"GIFViewController"}
+//                      @{@"text"  : @"TableViewCell多图zoom",
+//                        @"class" : @"GKTest02ViewController"},
+//                      @{@"text"  : @"TableViewCell多图push",
+//                        @"class" : @"GKTest03ViewController"},
+//                      @{@"text"  : @"微信朋友圈",
+//                        @"class" : @"GKTimeLineViewController"},
+//                      @{@"text"  : @"今日头条",
+//                        @"class" : @"GKToutiaoViewController"},
+//                      @{@"text"  : @"简书",
+//                        @"class" : @"GKJianshuViewController"},
+//                      @{@"text"  : @"GIF图片",
+//                        @"class" : @"GIFViewController"}
                       ];
     
     [self.mainTable reloadData];

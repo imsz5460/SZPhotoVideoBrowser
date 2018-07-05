@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) GKPhoto *photo;
 /**CLplayer*/
-@property (nonatomic, strong) CLPlayerView *playerView;
+@property (nonatomic, weak) CLPlayerView *playerView;
 /** 是否重新布局 */
 @property (nonatomic, assign) BOOL isLayoutSubViews;
 
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 重新布局
 - (void)resetFrame;
-
+-(CLPlayerView *)_playerView;
 @end
 
 NS_ASSUME_NONNULL_END

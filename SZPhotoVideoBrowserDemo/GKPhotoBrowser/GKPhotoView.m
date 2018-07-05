@@ -71,6 +71,10 @@
     return _scrollView;
 }
 
+-(CLPlayerView *)_playerView {
+    return _playerView;
+}
+
 -(CLPlayerView *)playerView {
     if (!_playerView) {
         // 旋转之后当前的设备方向

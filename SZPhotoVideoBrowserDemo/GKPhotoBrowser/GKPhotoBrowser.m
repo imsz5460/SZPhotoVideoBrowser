@@ -426,8 +426,22 @@ NSInteger preindex = -1;
     [super viewWillDisappear:animated];
     [_playerView destroyPlayer];
     _playerView = nil;
-    [self photoViewForIndex:self.currentIndex-1].playerView = nil;
-    [self photoViewForIndex:self.currentIndex+1].playerView = nil;
+
+    for (GKPhotoView *photoView in _visiblePhotoViews) {
+        CLPlayerView *view = photoView._playerView;
+        [view destroyPlayer];
+        view = nil;
+    }
+    
+    
+    for (GKPhotoView *photoView in _reusablePhotoViews) {
+
+        CLPlayerView *view = photoView._playerView;
+        [view destroyPlayer];
+        view = nil;
+    }
+//
+//    [_reusablePhotoViews removeAllObjects];
 //     preindex = 0;
 }
 
@@ -791,6 +805,9 @@ NSInteger preindex = -1;
 - (GKPhotoView *)dequeueReusablePhotoView {
     GKPhotoView *photoView = [self.reusablePhotoViews anyObject];
     if (photoView) {
+        CLPlayerView *view = photoView._playerView;
+        [view destroyPlayer];
+        view = nil;
         [_reusablePhotoViews removeObject:photoView];
     }else {
         photoView = [[GKPhotoView alloc] initWithFrame:self.photoScrollView.bounds imageProtocol:_imageProtocol];
@@ -849,8 +866,8 @@ NSInteger preindex = -1;
             // 旋转contentView
             self.contentView.transform = CGAffineTransformMakeRotation(M_PI * rotation);
             _playerView.frame = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
-            [self photoViewForIndex:self.currentIndex -1].playerView.frame = _playerView.frame;
-            [self photoViewForIndex:self.currentIndex +1].playerView.frame = _playerView.frame;
+            [self photoViewForIndex:self.currentIndex -1]._playerView.frame = _playerView.frame;
+            [self photoViewForIndex:self.currentIndex +1]._playerView.frame = _playerView.frame;
             // 设置frame
             self.contentView.bounds = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
             
@@ -884,8 +901,8 @@ NSInteger preindex = -1;
             self.contentView.center = [UIApplication sharedApplication].keyWindow.center;
             _playerView.center = [UIApplication sharedApplication].keyWindow.center;
             _playerView.frame = CGRectMake(0, 0, MIN(screenBounds.size.width, screenBounds.size.height), MAX(screenBounds.size.width, screenBounds.size.height));
-            [self photoViewForIndex:self.currentIndex -1].playerView.frame = _playerView.frame;
-            [self photoViewForIndex:self.currentIndex +1].playerView.frame = _playerView.frame;
+            [self photoViewForIndex:self.currentIndex -1]._playerView.frame = _playerView.frame;
+            [self photoViewForIndex:self.currentIndex +1]._playerView.frame = _playerView.frame;
             
             [self layoutSubviews];
             
@@ -906,7 +923,9 @@ NSInteger preindex = -1;
     NSMutableArray *viewsForRemove = [NSMutableArray new];
     for (GKPhotoView *photoView in _visiblePhotoViews) {
         if ((photoView.frame.origin.x + photoView.frame.size.width < self.photoScrollView.contentOffset.x - self.photoScrollView.frame.size.width) || (photoView.frame.origin.x > self.photoScrollView.contentOffset.x + 2 * self.photoScrollView.frame.size.width)) {
-//            photoView.playerView = nil;
+            CLPlayerView *view = photoView._playerView;
+            [view destroyPlayer];
+            view = nil;
             [photoView removeFromSuperview];
             GKPhoto *photo = nil;
             [photoView setupPhoto:photo];
@@ -920,7 +939,7 @@ NSInteger preindex = -1;
 - (void)setupPhotoViews {
     CGFloat index2 = self.photoScrollView.contentOffset.x / self.photoScrollView.frame.size.width;
     NSInteger index = index2 + 0.5;
-
+    NSInteger i  = index2;
 //  NSLog(@"-------%ld",index);
     for (NSInteger i = index - 1; i <= index + 1; i++) {
         if (i < 0 || i >= self.photos.count) {
@@ -943,6 +962,7 @@ NSInteger preindex = -1;
             photoView.tag   = i;
             [self.photoScrollView addSubview:photoView];
             [photoView addSubview: photoView.playerView];
+            photoView.clipsToBounds = YES;//防止上次的横屏挡住旁边的view
            
             photoView.playerView.hidden = YES;
             [_visiblePhotoViews addObject:photoView];
@@ -955,33 +975,32 @@ NSInteger preindex = -1;
         }
     }
     
-    for (int i = 0; i < self.photos.count; i++) {
+        GKPhoto *photo = self.photos[i];
         if (index2 == i) {
             if (preindex != index2) {
                 [_playerView pausePlay];
                 preindex = i;
-                _playerView = [self photoViewForIndex:preindex].playerView;
-                
-                UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
-                CGRect screenBounds = [UIScreen mainScreen].bounds;
-                // 旋转之后是横屏
-                if (UIDeviceOrientationIsLandscape(currentOrientation)) {
-                    _playerView.frame = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
-                    [self photoViewForIndex:self.currentIndex -1].playerView.frame = _playerView.frame;
-                    [self photoViewForIndex:self.currentIndex +1].playerView.frame = _playerView.frame;
-                } else {
-                     _playerView.frame = CGRectMake(0, 0, MIN(screenBounds.size.width, screenBounds.size.height), MAX(screenBounds.size.width, screenBounds.size.height));
-                    [self photoViewForIndex:self.currentIndex -1].playerView.frame = _playerView.frame;
-                    [self photoViewForIndex:self.currentIndex +1].playerView.frame = _playerView.frame;
+                if (photo.isVideo) {
+                    _playerView = [self photoViewForIndex:preindex]._playerView;
+                    UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
+                    CGRect screenBounds = [UIScreen mainScreen].bounds;
+                    // 旋转之后是横屏
+                    if (UIDeviceOrientationIsLandscape(currentOrientation)) {
+                        CGRect tempframe = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
+                        _playerView.frame = tempframe;
+                        [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
+                        [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
+                    } else {
+                        CGRect tempframe = CGRectMake(0, 0, MIN(screenBounds.size.width, screenBounds.size.height), MAX(screenBounds.size.width, screenBounds.size.height));
+                        _playerView.frame = tempframe;
+                        [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
+                        [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
+                    }
+
+                    [_playerView resetPlay];
                 }
-                
-//                [self layoutSubviews];
-//                [self.view setNeedsLayout];
-//                [self.view layoutIfNeeded];
-                [_playerView resetPlay];
             }
         }
-    }
 
     // 更换photoView
     if (index != self.currentIndex && self.isShow && (index >= 0 && index < self.photos.count)) {
@@ -1050,7 +1069,6 @@ NSInteger preindex = -1;
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
 //    NSLog(@"gestureRecognizer.view-=====%@",gestureRecognizer.view);
-
 //    CGPoint point = [touch locationInView:[touch view]]; //返回触摸点在视图中的当前坐标
 //    int x = point.x;
 //    int y = point.y;

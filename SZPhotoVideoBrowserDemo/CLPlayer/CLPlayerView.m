@@ -608,7 +608,7 @@ typedef NS_ENUM(NSInteger, CLPanDirection){
         //设置进度条
         self.maskView.slider.maximumValue   = 1;
         
-        NSLog(@"-----%@-----%lf",_playerItem,CMTimeGetSeconds([_playerItem currentTime]));
+//        NSLog(@"-----%@-----%lf",_playerItem,CMTimeGetSeconds([_playerItem currentTime]));
         self.maskView.slider.value          = CMTimeGetSeconds([_playerItem currentTime]) / (_playerItem.duration.value / _playerItem.duration.timescale);
         //判断是否真正的在播放
         if (self.playerItem.isPlaybackLikelyToKeepUp && self.maskView.slider.value > 0) {
@@ -792,10 +792,12 @@ typedef NS_ENUM(NSInteger, CLPanDirection){
 - (void)destroyAllTimer{
     [_CLGCDTimerManager cancelTimerWithName:CLPlayer_sliderTimer];
     [_CLGCDTimerManager cancelTimerWithName:CLPlayer_tapTimer];
+
 }
 //销毁定时消失定时器
 - (void)destroyToolBarTimer{
     [_CLGCDTimerManager cancelTimerWithName:CLPlayer_tapTimer];
+
 }
 //#pragma mark - 屏幕旋转通知
 //- (void)orientChange:(NSNotification *)notification{
