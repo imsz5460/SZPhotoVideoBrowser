@@ -1,22 +1,23 @@
 //
-//  Slider.m
-//  CLPlayerDemo
+//  SZSlider.m
+//  SZPhotoVideoBrowserDemo
 //
-//  Created by JmoVxia on 2016/11/2.
-//  Copyright © 2016年 JmoVxia. All rights reserved.
+//  Created by shizhi on 2018/7/6.
+//  Copyright © 2018年 sz. All rights reserved.
 //
 
-#import "CLSlider.h"
+#import "SZSlider.h"
+
 
 #define SLIDER_X_BOUND 30
 #define SLIDER_Y_BOUND 40
 
-@interface CLSlider ()
+@interface SZSlider ()
 /**lastBounds*/
 @property (nonatomic,assign) CGRect lastBounds;
 @end
+@implementation SZSlider
 
-@implementation CLSlider
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
@@ -25,19 +26,19 @@
     return self;
 }
 - (void)setup {
-    UIImage *thumbImage = [self getPictureWithName:@"CLRound"];
+    UIImage *thumbImage = [UIImage imageNamed:@"knob"];
     [self setThumbImage:thumbImage forState:UIControlStateHighlighted];
     [self setThumbImage:thumbImage forState:UIControlStateNormal];
 }
 // 控制slider的宽和高，这个方法才是真正的改变slider滑道的高的
-- (CGRect)trackRectForBounds:(CGRect)bounds{
-    [super trackRectForBounds:bounds];
-    return CGRectMake(bounds.origin.x, bounds.origin.y, CGRectGetWidth(bounds), 2);
-}
+//- (CGRect)trackRectForBounds:(CGRect)bounds{
+//    [super trackRectForBounds:bounds];
+//    return CGRectMake(bounds.origin.x, bounds.origin.y, CGRectGetWidth(bounds), 2);
+//}
 //修改滑块位置
 - (CGRect)thumbRectForBounds:(CGRect)bounds trackRect:(CGRect)rect value:(float)value {
-    rect.origin.x   = rect.origin.x - 6 ;
-    rect.size.width = rect.size.width + 12;
+//    rect.origin.x   = rect.origin.x - 6 ;
+//    rect.size.width = rect.size.width + 12;
     CGRect result   = [super thumbRectForBounds:bounds trackRect:rect value:value];
     //记录下最终的frame
     _lastBounds     = result;
@@ -77,11 +78,10 @@
     return result;
 }
 #pragma mark - 获取资源图片
-- (UIImage *)getPictureWithName:(NSString *)name{
-    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"CLPlayer" ofType:@"bundle"]];
-    NSString *path   = [bundle pathForResource:name ofType:@"png"];
-    return [[UIImage imageWithContentsOfFile:path] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-}
-
+//- (UIImage *)getPictureWithName:(NSString *)name{
+//    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"CLPlayer" ofType:@"bundle"]];
+//    NSString *path   = [bundle pathForResource:name ofType:@"png"];
+//    return [[UIImage imageWithContentsOfFile:path] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//}
 
 @end

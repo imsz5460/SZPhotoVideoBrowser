@@ -10,7 +10,9 @@
 #import "GKPhoto.h"
 #import "GKWebImageProtocol.h"
 #import "GKLoadingView.h"
-#import "CLPlayerView.h"
+#import "SBPlayer.h"
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class GKPhotoView;
@@ -25,7 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) GKPhoto *photo;
 /**CLplayer*/
-@property (nonatomic, weak) CLPlayerView *playerView;
+//@property (nonatomic, strong) CLPlayerView *playerView;
+
+/**CLplayer*/
+@property (nonatomic, strong) SBPlayer *playerView;
 /** 是否重新布局 */
 @property (nonatomic, assign) BOOL isLayoutSubViews;
 
@@ -41,7 +46,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 重新布局
 - (void)resetFrame;
--(CLPlayerView *)_playerView;
+//-(CLPlayerView *)_playerView;
+
+-(SBPlayer *)_playerView;
 @end
 
 NS_ASSUME_NONNULL_END

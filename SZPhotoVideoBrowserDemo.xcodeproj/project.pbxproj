@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		713D1FF427FC7CC8BDCE8BCF /* Pods_SZPhotoVideoBrowserDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BE02B8999FD10C823935DE /* Pods_SZPhotoVideoBrowserDemo.framework */; };
+		B52A185120EF5A5800D23F84 /* GKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183220EF5A5800D23F84 /* GKLoadingView.m */; };
+		B52A185220EF5A5800D23F84 /* GKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183420EF5A5800D23F84 /* GKPhoto.m */; };
+		B52A185320EF5A5800D23F84 /* GKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B52A183520EF5A5800D23F84 /* GKPhotoBrowser.bundle */; };
+		B52A185420EF5A5800D23F84 /* GKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183720EF5A5800D23F84 /* GKPhotoBrowser.m */; };
+		B52A185520EF5A5800D23F84 /* GKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183A20EF5A5800D23F84 /* GKPhotoView.m */; };
+		B52A185620EF5A5800D23F84 /* GKWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183C20EF5A5800D23F84 /* GKWebImageManager.m */; };
+		B52A185720EF5A5800D23F84 /* SZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A183F20EF5A5800D23F84 /* SZScrollView.m */; };
+		B52A185820EF5A5800D23F84 /* UIScrollView+GKGestureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A184120EF5A5800D23F84 /* UIScrollView+GKGestureHandle.m */; };
+		B52A185920EF5A5800D23F84 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = B52A184320EF5A5800D23F84 /* knob.png */; };
+		B52A185A20EF5A5800D23F84 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = B52A184420EF5A5800D23F84 /* pause.png */; };
+		B52A185B20EF5A5800D23F84 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B52A184520EF5A5800D23F84 /* pause@2x.png */; };
+		B52A185C20EF5A5800D23F84 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = B52A184620EF5A5800D23F84 /* play.png */; };
+		B52A185D20EF5A5800D23F84 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B52A184720EF5A5800D23F84 /* play@2x.png */; };
+		B52A185E20EF5A5800D23F84 /* SBControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A184A20EF5A5800D23F84 /* SBControlView.m */; };
+		B52A185F20EF5A5800D23F84 /* SBPauseOrPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A184C20EF5A5800D23F84 /* SBPauseOrPlayView.m */; };
+		B52A186020EF5A5800D23F84 /* SBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A184E20EF5A5800D23F84 /* SBPlayer.m */; };
+		B52A186120EF5A5800D23F84 /* SZSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B52A185020EF5A5800D23F84 /* SZSlider.m */; };
 		B596F21A20ECB48C00DC28EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B596F21920ECB48C00DC28EE /* Assets.xcassets */; };
 		B596F21D20ECB48C00DC28EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B596F21B20ECB48C00DC28EE /* LaunchScreen.storyboard */; };
 		B596F22020ECB48C00DC28EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F21F20ECB48C00DC28EE /* main.m */; };
@@ -19,20 +36,6 @@
 		B596F29420ECB4FD00DC28EE /* GKTest01ViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24D20ECB4FC00DC28EE /* GKTest01ViewCell.m */; };
 		B596F29520ECB4FD00DC28EE /* GKTest01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */; };
 		B596F29620ECB4FD00DC28EE /* UIView+GKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */; };
-		B596F2A320ECB4FD00DC28EE /* AILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27420ECB4FD00DC28EE /* AILoadingView.m */; };
-		B596F2A420ECB4FD00DC28EE /* CLGCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */; };
-		B596F2A520ECB4FD00DC28EE /* CLPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */; };
-		B596F2A620ECB4FD00DC28EE /* CLPlayerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */; };
-		B596F2A720ECB4FD00DC28EE /* CLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */; };
-		B596F2A820ECB4FD00DC28EE /* CLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F27D20ECB4FD00DC28EE /* CLSlider.m */; };
-		B596F2A920ECB4FD00DC28EE /* GKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28120ECB4FD00DC28EE /* GKLoadingView.m */; };
-		B596F2AA20ECB4FD00DC28EE /* GKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28320ECB4FD00DC28EE /* GKPhoto.m */; };
-		B596F2AB20ECB4FD00DC28EE /* GKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */; };
-		B596F2AC20ECB4FD00DC28EE /* GKPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */; };
-		B596F2AD20ECB4FD00DC28EE /* GKPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28920ECB4FD00DC28EE /* GKPhotoView.m */; };
-		B596F2AE20ECB4FD00DC28EE /* GKWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */; };
-		B596F2AF20ECB4FD00DC28EE /* SZScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F28E20ECB4FD00DC28EE /* SZScrollView.m */; };
-		B596F2B020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,37 @@
 /* Begin PBXFileReference section */
 		123F66A0B23BF87B9A9D1285 /* Pods-SZPhotoVideoBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZPhotoVideoBrowserDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A7BE02B8999FD10C823935DE /* Pods_SZPhotoVideoBrowserDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SZPhotoVideoBrowserDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52A183120EF5A5800D23F84 /* GKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLoadingView.h; sourceTree = "<group>"; };
+		B52A183220EF5A5800D23F84 /* GKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoadingView.m; sourceTree = "<group>"; };
+		B52A183320EF5A5800D23F84 /* GKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhoto.h; sourceTree = "<group>"; };
+		B52A183420EF5A5800D23F84 /* GKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhoto.m; sourceTree = "<group>"; };
+		B52A183520EF5A5800D23F84 /* GKPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GKPhotoBrowser.bundle; sourceTree = "<group>"; };
+		B52A183620EF5A5800D23F84 /* GKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowser.h; sourceTree = "<group>"; };
+		B52A183720EF5A5800D23F84 /* GKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoBrowser.m; sourceTree = "<group>"; };
+		B52A183820EF5A5800D23F84 /* GKPhotoBrowserConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowserConfigure.h; sourceTree = "<group>"; };
+		B52A183920EF5A5800D23F84 /* GKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoView.h; sourceTree = "<group>"; };
+		B52A183A20EF5A5800D23F84 /* GKPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoView.m; sourceTree = "<group>"; };
+		B52A183B20EF5A5800D23F84 /* GKWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageManager.h; sourceTree = "<group>"; };
+		B52A183C20EF5A5800D23F84 /* GKWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWebImageManager.m; sourceTree = "<group>"; };
+		B52A183D20EF5A5800D23F84 /* GKWebImageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageProtocol.h; sourceTree = "<group>"; };
+		B52A183E20EF5A5800D23F84 /* SZScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZScrollView.h; sourceTree = "<group>"; };
+		B52A183F20EF5A5800D23F84 /* SZScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZScrollView.m; sourceTree = "<group>"; };
+		B52A184020EF5A5800D23F84 /* UIScrollView+GKGestureHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKGestureHandle.h"; sourceTree = "<group>"; };
+		B52A184120EF5A5800D23F84 /* UIScrollView+GKGestureHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKGestureHandle.m"; sourceTree = "<group>"; };
+		B52A184320EF5A5800D23F84 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		B52A184420EF5A5800D23F84 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		B52A184520EF5A5800D23F84 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@2x.png"; sourceTree = "<group>"; };
+		B52A184620EF5A5800D23F84 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		B52A184720EF5A5800D23F84 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		B52A184820EF5A5800D23F84 /* SBCommonHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCommonHeader.h; sourceTree = "<group>"; };
+		B52A184920EF5A5800D23F84 /* SBControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBControlView.h; sourceTree = "<group>"; };
+		B52A184A20EF5A5800D23F84 /* SBControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBControlView.m; sourceTree = "<group>"; };
+		B52A184B20EF5A5800D23F84 /* SBPauseOrPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPauseOrPlayView.h; sourceTree = "<group>"; };
+		B52A184C20EF5A5800D23F84 /* SBPauseOrPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPauseOrPlayView.m; sourceTree = "<group>"; };
+		B52A184D20EF5A5800D23F84 /* SBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPlayer.h; sourceTree = "<group>"; };
+		B52A184E20EF5A5800D23F84 /* SBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPlayer.m; sourceTree = "<group>"; };
+		B52A184F20EF5A5800D23F84 /* SZSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZSlider.h; sourceTree = "<group>"; };
+		B52A185020EF5A5800D23F84 /* SZSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZSlider.m; sourceTree = "<group>"; };
 		B596F20D20ECB48100DC28EE /* SZPhotoVideoBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZPhotoVideoBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B596F21920ECB48C00DC28EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B596F21C20ECB48C00DC28EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,34 +112,6 @@
 		B596F24F20ECB4FC00DC28EE /* GKTest01ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKTest01ViewController.m; sourceTree = "<group>"; };
 		B596F25220ECB4FC00DC28EE /* UIView+GKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GKFrame.h"; sourceTree = "<group>"; };
 		B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GKFrame.m"; sourceTree = "<group>"; };
-		B596F27320ECB4FD00DC28EE /* AILoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AILoadingView.h; sourceTree = "<group>"; };
-		B596F27420ECB4FD00DC28EE /* AILoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AILoadingView.m; sourceTree = "<group>"; };
-		B596F27520ECB4FD00DC28EE /* CLGCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLGCDTimerManager.h; sourceTree = "<group>"; };
-		B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLGCDTimerManager.m; sourceTree = "<group>"; };
-		B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLPlayer.bundle; sourceTree = "<group>"; };
-		B596F27820ECB4FD00DC28EE /* CLPlayerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPlayerMaskView.h; sourceTree = "<group>"; };
-		B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPlayerMaskView.m; sourceTree = "<group>"; };
-		B596F27A20ECB4FD00DC28EE /* CLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPlayerView.h; sourceTree = "<group>"; };
-		B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPlayerView.m; sourceTree = "<group>"; };
-		B596F27C20ECB4FD00DC28EE /* CLSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLSlider.h; sourceTree = "<group>"; };
-		B596F27D20ECB4FD00DC28EE /* CLSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLSlider.m; sourceTree = "<group>"; };
-		B596F28020ECB4FD00DC28EE /* GKLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLoadingView.h; sourceTree = "<group>"; };
-		B596F28120ECB4FD00DC28EE /* GKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoadingView.m; sourceTree = "<group>"; };
-		B596F28220ECB4FD00DC28EE /* GKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhoto.h; sourceTree = "<group>"; };
-		B596F28320ECB4FD00DC28EE /* GKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhoto.m; sourceTree = "<group>"; };
-		B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GKPhotoBrowser.bundle; sourceTree = "<group>"; };
-		B596F28520ECB4FD00DC28EE /* GKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowser.h; sourceTree = "<group>"; };
-		B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoBrowser.m; sourceTree = "<group>"; };
-		B596F28720ECB4FD00DC28EE /* GKPhotoBrowserConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoBrowserConfigure.h; sourceTree = "<group>"; };
-		B596F28820ECB4FD00DC28EE /* GKPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoView.h; sourceTree = "<group>"; };
-		B596F28920ECB4FD00DC28EE /* GKPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoView.m; sourceTree = "<group>"; };
-		B596F28A20ECB4FD00DC28EE /* GKWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageManager.h; sourceTree = "<group>"; };
-		B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWebImageManager.m; sourceTree = "<group>"; };
-		B596F28C20ECB4FD00DC28EE /* GKWebImageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWebImageProtocol.h; sourceTree = "<group>"; };
-		B596F28D20ECB4FD00DC28EE /* SZScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZScrollView.h; sourceTree = "<group>"; };
-		B596F28E20ECB4FD00DC28EE /* SZScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZScrollView.m; sourceTree = "<group>"; };
-		B596F28F20ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKGestureHandle.h"; sourceTree = "<group>"; };
-		B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKGestureHandle.m"; sourceTree = "<group>"; };
 		B596F2B120ECB65D00DC28EE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C52D1E4315827C2936B11915 /* Pods-SZPhotoVideoBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZPhotoVideoBrowserDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZPhotoVideoBrowserDemo/Pods-SZPhotoVideoBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +150,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B52A182E20EF5A5800D23F84 /* SZPhotoVideoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B52A182F20EF5A5800D23F84 /* GKPhotoBrowser */,
+				B52A184220EF5A5800D23F84 /* SBPlayer */,
+			);
+			path = SZPhotoVideoBrowser;
+			sourceTree = "<group>";
+		};
+		B52A182F20EF5A5800D23F84 /* GKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B52A183020EF5A5800D23F84 /* GKLoadingView */,
+				B52A183320EF5A5800D23F84 /* GKPhoto.h */,
+				B52A183420EF5A5800D23F84 /* GKPhoto.m */,
+				B52A183520EF5A5800D23F84 /* GKPhotoBrowser.bundle */,
+				B52A183620EF5A5800D23F84 /* GKPhotoBrowser.h */,
+				B52A183720EF5A5800D23F84 /* GKPhotoBrowser.m */,
+				B52A183820EF5A5800D23F84 /* GKPhotoBrowserConfigure.h */,
+				B52A183920EF5A5800D23F84 /* GKPhotoView.h */,
+				B52A183A20EF5A5800D23F84 /* GKPhotoView.m */,
+				B52A183B20EF5A5800D23F84 /* GKWebImageManager.h */,
+				B52A183C20EF5A5800D23F84 /* GKWebImageManager.m */,
+				B52A183D20EF5A5800D23F84 /* GKWebImageProtocol.h */,
+				B52A183E20EF5A5800D23F84 /* SZScrollView.h */,
+				B52A183F20EF5A5800D23F84 /* SZScrollView.m */,
+				B52A184020EF5A5800D23F84 /* UIScrollView+GKGestureHandle.h */,
+				B52A184120EF5A5800D23F84 /* UIScrollView+GKGestureHandle.m */,
+			);
+			path = GKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		B52A183020EF5A5800D23F84 /* GKLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				B52A183120EF5A5800D23F84 /* GKLoadingView.h */,
+				B52A183220EF5A5800D23F84 /* GKLoadingView.m */,
+			);
+			path = GKLoadingView;
+			sourceTree = "<group>";
+		};
+		B52A184220EF5A5800D23F84 /* SBPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B52A184320EF5A5800D23F84 /* knob.png */,
+				B52A184420EF5A5800D23F84 /* pause.png */,
+				B52A184520EF5A5800D23F84 /* pause@2x.png */,
+				B52A184620EF5A5800D23F84 /* play.png */,
+				B52A184720EF5A5800D23F84 /* play@2x.png */,
+				B52A184820EF5A5800D23F84 /* SBCommonHeader.h */,
+				B52A184920EF5A5800D23F84 /* SBControlView.h */,
+				B52A184A20EF5A5800D23F84 /* SBControlView.m */,
+				B52A184B20EF5A5800D23F84 /* SBPauseOrPlayView.h */,
+				B52A184C20EF5A5800D23F84 /* SBPauseOrPlayView.m */,
+				B52A184D20EF5A5800D23F84 /* SBPlayer.h */,
+				B52A184E20EF5A5800D23F84 /* SBPlayer.m */,
+				B52A184F20EF5A5800D23F84 /* SZSlider.h */,
+				B52A185020EF5A5800D23F84 /* SZSlider.m */,
+			);
+			path = SBPlayer;
+			sourceTree = "<group>";
+		};
 		B596F20420ECB48100DC28EE = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				B596F24220ECB4FC00DC28EE /* Classes */,
-				B596F27220ECB4FD00DC28EE /* CLPlayer */,
-				B596F27E20ECB4FD00DC28EE /* GKPhotoBrowser */,
+				B52A182E20EF5A5800D23F84 /* SZPhotoVideoBrowser */,
 				B596F21920ECB48C00DC28EE /* Assets.xcassets */,
 				B596F21B20ECB48C00DC28EE /* LaunchScreen.storyboard */,
 				B596F21E20ECB48C00DC28EE /* Info.plist */,
@@ -224,56 +291,6 @@
 				B596F25320ECB4FC00DC28EE /* UIView+GKFrame.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		B596F27220ECB4FD00DC28EE /* CLPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				B596F27320ECB4FD00DC28EE /* AILoadingView.h */,
-				B596F27420ECB4FD00DC28EE /* AILoadingView.m */,
-				B596F27520ECB4FD00DC28EE /* CLGCDTimerManager.h */,
-				B596F27620ECB4FD00DC28EE /* CLGCDTimerManager.m */,
-				B596F27720ECB4FD00DC28EE /* CLPlayer.bundle */,
-				B596F27820ECB4FD00DC28EE /* CLPlayerMaskView.h */,
-				B596F27920ECB4FD00DC28EE /* CLPlayerMaskView.m */,
-				B596F27A20ECB4FD00DC28EE /* CLPlayerView.h */,
-				B596F27B20ECB4FD00DC28EE /* CLPlayerView.m */,
-				B596F27C20ECB4FD00DC28EE /* CLSlider.h */,
-				B596F27D20ECB4FD00DC28EE /* CLSlider.m */,
-			);
-			path = CLPlayer;
-			sourceTree = "<group>";
-		};
-		B596F27E20ECB4FD00DC28EE /* GKPhotoBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				B596F27F20ECB4FD00DC28EE /* GKLoadingView */,
-				B596F28220ECB4FD00DC28EE /* GKPhoto.h */,
-				B596F28320ECB4FD00DC28EE /* GKPhoto.m */,
-				B596F28420ECB4FD00DC28EE /* GKPhotoBrowser.bundle */,
-				B596F28520ECB4FD00DC28EE /* GKPhotoBrowser.h */,
-				B596F28620ECB4FD00DC28EE /* GKPhotoBrowser.m */,
-				B596F28720ECB4FD00DC28EE /* GKPhotoBrowserConfigure.h */,
-				B596F28820ECB4FD00DC28EE /* GKPhotoView.h */,
-				B596F28920ECB4FD00DC28EE /* GKPhotoView.m */,
-				B596F28A20ECB4FD00DC28EE /* GKWebImageManager.h */,
-				B596F28B20ECB4FD00DC28EE /* GKWebImageManager.m */,
-				B596F28C20ECB4FD00DC28EE /* GKWebImageProtocol.h */,
-				B596F28D20ECB4FD00DC28EE /* SZScrollView.h */,
-				B596F28E20ECB4FD00DC28EE /* SZScrollView.m */,
-				B596F28F20ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.h */,
-				B596F29020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m */,
-			);
-			path = GKPhotoBrowser;
-			sourceTree = "<group>";
-		};
-		B596F27F20ECB4FD00DC28EE /* GKLoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				B596F28020ECB4FD00DC28EE /* GKLoadingView.h */,
-				B596F28120ECB4FD00DC28EE /* GKLoadingView.m */,
-			);
-			path = GKLoadingView;
 			sourceTree = "<group>";
 		};
 		F392DCC32299ADBE4018F43F /* Pods */ = {
@@ -390,10 +407,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52A185C20EF5A5800D23F84 /* play.png in Resources */,
 				B596F21D20ECB48C00DC28EE /* LaunchScreen.storyboard in Resources */,
+				B52A185B20EF5A5800D23F84 /* pause@2x.png in Resources */,
+				B52A185920EF5A5800D23F84 /* knob.png in Resources */,
+				B52A185A20EF5A5800D23F84 /* pause.png in Resources */,
+				B52A185320EF5A5800D23F84 /* GKPhotoBrowser.bundle in Resources */,
+				B52A185D20EF5A5800D23F84 /* play@2x.png in Resources */,
 				B596F21A20ECB48C00DC28EE /* Assets.xcassets in Resources */,
-				B596F2AB20ECB4FD00DC28EE /* GKPhotoBrowser.bundle in Resources */,
-				B596F2A520ECB4FD00DC28EE /* CLPlayer.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,25 +488,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B596F2A620ECB4FD00DC28EE /* CLPlayerMaskView.m in Sources */,
 				B596F29120ECB4FD00DC28EE /* AppDelegate.m in Sources */,
 				B596F22020ECB48C00DC28EE /* main.m in Sources */,
-				B596F2AC20ECB4FD00DC28EE /* GKPhotoBrowser.m in Sources */,
 				B596F29220ECB4FD00DC28EE /* GKBaseViewController.m in Sources */,
-				B596F2AF20ECB4FD00DC28EE /* SZScrollView.m in Sources */,
-				B596F2A320ECB4FD00DC28EE /* AILoadingView.m in Sources */,
-				B596F2AA20ECB4FD00DC28EE /* GKPhoto.m in Sources */,
-				B596F2AE20ECB4FD00DC28EE /* GKWebImageManager.m in Sources */,
+				B52A185F20EF5A5800D23F84 /* SBPauseOrPlayView.m in Sources */,
+				B52A185820EF5A5800D23F84 /* UIScrollView+GKGestureHandle.m in Sources */,
+				B52A185520EF5A5800D23F84 /* GKPhotoView.m in Sources */,
 				B596F29420ECB4FD00DC28EE /* GKTest01ViewCell.m in Sources */,
+				B52A186120EF5A5800D23F84 /* SZSlider.m in Sources */,
 				B596F29520ECB4FD00DC28EE /* GKTest01ViewController.m in Sources */,
-				B596F2A920ECB4FD00DC28EE /* GKLoadingView.m in Sources */,
-				B596F2A720ECB4FD00DC28EE /* CLPlayerView.m in Sources */,
+				B52A185120EF5A5800D23F84 /* GKLoadingView.m in Sources */,
+				B52A185220EF5A5800D23F84 /* GKPhoto.m in Sources */,
+				B52A185620EF5A5800D23F84 /* GKWebImageManager.m in Sources */,
+				B52A186020EF5A5800D23F84 /* SBPlayer.m in Sources */,
 				B596F29620ECB4FD00DC28EE /* UIView+GKFrame.m in Sources */,
-				B596F2AD20ECB4FD00DC28EE /* GKPhotoView.m in Sources */,
-				B596F2A420ECB4FD00DC28EE /* CLGCDTimerManager.m in Sources */,
-				B596F2B020ECB4FD00DC28EE /* UIScrollView+GKGestureHandle.m in Sources */,
+				B52A185720EF5A5800D23F84 /* SZScrollView.m in Sources */,
 				B596F29320ECB4FD00DC28EE /* GKMainViewController.m in Sources */,
-				B596F2A820ECB4FD00DC28EE /* CLSlider.m in Sources */,
+				B52A185E20EF5A5800D23F84 /* SBControlView.m in Sources */,
+				B52A185420EF5A5800D23F84 /* GKPhotoBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

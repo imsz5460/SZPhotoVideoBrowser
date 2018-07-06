@@ -8,8 +8,6 @@
 
 #import "GKPhotoView.h"
 
-
-
 @interface GKPhotoView()
 
 @property (nonatomic, strong, readwrite) UIScrollView *scrollView;
@@ -71,47 +69,43 @@
     return _scrollView;
 }
 
--(CLPlayerView *)_playerView {
+//-(CLPlayerView *)_playerView {
+//    return _playerView;
+//}
+-(SBPlayer *)_playerView {
     return _playerView;
 }
 
--(CLPlayerView *)playerView {
+-(SBPlayer *)playerView {
     if (!_playerView) {
-        // 旋转之后当前的设备方向
-        UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
-        
-        CGRect screenBounds = [UIScreen mainScreen].bounds;
-        if (UIDeviceOrientationIsLandscape(currentOrientation)) {
-            w = MAX(screenBounds.size.width, screenBounds.size.height);
-            h = MIN(screenBounds.size.width, screenBounds.size.height);
-        } else {
-            h = MAX(screenBounds.size.width, screenBounds.size.height);
-            w = MIN(screenBounds.size.width, screenBounds.size.height);
-        }
-        
-        _playerView = [[CLPlayerView alloc] initWithFrame:CGRectMake(0, 0, w,h)];
-        _playerView.topToolBarHiddenType = TopToolBarHiddenSmall;
-        _playerView.videoFillMode = VideoFillModeResizeAspect;
-        _playerView.fullStatusBarHiddenType = FullStatusBarHiddenFollowToolBar;
-        //  _playerView.smallGestureControl = YES;
-        //播放
-//        [_playerView playVideo];
-        
-        //返回按钮点击事件回调
-        [_playerView backButton:^(UIButton *button) {
-            NSLog(@"返回按钮被点击");
-        }];
-        //播放完成回调
-        [_playerView endPlay:^{
-            //销毁播放器
-            //            [_playerView destroyPlayer];
-            //            _playerView = nil;
-           
-            NSLog(@"播放完成");
-        }];
+
+    //初始化播放器
+    _playerView = [[SBPlayer alloc] init];
+    //设置标题
+//    [_playerView setTitle:@"这是一个标题"];
+    //设置播放器背景颜色
+    _playerView.backgroundColor = [UIColor blackColor];
+    //约束，也可以使用Frame
+//    [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.left.mas_equalTo(self.view);
+//        make.top.mas_equalTo(self.view.mas_top);
+//        make.height.mas_equalTo(@250);
+//    }];
+    UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
+    CGRect screenBounds = [UIScreen mainScreen].bounds;
+            if (UIDeviceOrientationIsLandscape(currentOrientation)) {
+                w = MAX(screenBounds.size.width, screenBounds.size.height);
+                h = MIN(screenBounds.size.width, screenBounds.size.height);
+            } else {
+                h = MAX(screenBounds.size.width, screenBounds.size.height);
+                w = MIN(screenBounds.size.width, screenBounds.size.height);
+            }
+    _playerView.frame = CGRectMake(0, 0, w,h);
+
     }
     return _playerView;
 }
+
 
 
 - (UIImageView *)imageView {
@@ -139,9 +133,9 @@
     
     if (photo.isVideo) {
         _playerView.hidden = NO;
-        _playerView.url = photo.url;
-    } else {
-        _playerView.hidden = YES;
+        [_playerView assetWithURL:photo.url];
+        //设置播放器填充模式 默认SBLayerVideoGravityResizeAspectFill，可以不添加此语句
+        _playerView.mode = SBLayerVideoGravityResizeAspect;
     }
     
     [self loadImageWithPhoto:photo];
@@ -280,6 +274,9 @@
         CGFloat height = width * 2.0 / 3.0;
         _imageView.bounds = CGRectMake(0, 0, width, height);
         _imageView.center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
+        _playerView.bounds = CGRectMake(0, 0, width, frame.size.height);
+        _playerView.center = CGPointMake(frame.size.width * 0.5, frame.size.height * 0.5);
+        
         // 重置内容大小
         self.scrollView.contentSize = self.imageView.frame.size;
     }

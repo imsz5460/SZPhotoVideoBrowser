@@ -8,9 +8,8 @@
 
 #import "GKPhotoBrowser.h"
 #import "GKWebImageManager.h"
-#import "CLPlayerView.h"
-#import "CLPlayerMaskView.h"
 #import "SZScrollView.h"
+#import "SBPlayer.h"
 // 判断iPhone X
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
@@ -58,7 +57,8 @@ static Class imageManagerClass = nil;
 
 @property (nonatomic, strong) id<GKWebImageProtocol> imageProtocol;
 /**CLplayer*/
-@property (nonatomic, strong) CLPlayerView *playerView;
+//@property (nonatomic, strong) CLPlayerView *playerView;
+@property (nonatomic, strong) SBPlayer *playerView;
 @end
 
 @implementation GKPhotoBrowser
@@ -75,9 +75,6 @@ NSInteger preindex = -1;
         _photoScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _photoScrollView.pagingEnabled  = YES;
         _photoScrollView.delegate       = self;
-//        UIGestureRecognizer *gestur = [[UIGestureRecognizer alloc]init];
-//        gestur.delegate=self;
-//        [_photoScrollView addGestureRecognizer:gestur];
         _photoScrollView.showsVerticalScrollIndicator   = NO;
         _photoScrollView.showsHorizontalScrollIndicator = NO;
         _photoScrollView.backgroundColor                = [UIColor clearColor];
@@ -176,17 +173,16 @@ NSInteger preindex = -1;
         default:
             break;
     }
+    
+//   [photoView setupPhoto:self.photos[self.currentIndex]];
+   
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     if (!self.isStatusBarChanged) {
-        
-//        if (!isplaying) {
 //            [self layoutSubviews];
-//        }
-        
     }
 }
 
@@ -280,6 +276,7 @@ NSInteger preindex = -1;
     }completion:^(BOOL finished) {
         self.isShow = YES;
         [photoView setupPhoto:photo];
+        [self currentPlayViewPlay:self.currentIndex];
         [self deviceOrientationDidChange];
     }];
 }
@@ -288,6 +285,7 @@ NSInteger preindex = -1;
     self.view.backgroundColor = [UIColor blackColor];
     self.isShow = YES;
     [[self currentPhotoView] setupPhoto:[self currentPhoto]];
+    [self currentPlayViewPlay:self.currentIndex];
     [self deviceOrientationDidChange];
 }
 
@@ -315,7 +313,7 @@ NSInteger preindex = -1;
     }completion:^(BOOL finished) {
         self.isShow = YES;
         [photoView setupPhoto:photo];
-        
+        [self currentPlayViewPlay:self.currentIndex];
         [self deviceOrientationDidChange];
     }];
 }
@@ -424,21 +422,19 @@ NSInteger preindex = -1;
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [_playerView destroyPlayer];
+    [_playerView stop];
     _playerView = nil;
 
     for (GKPhotoView *photoView in _visiblePhotoViews) {
-        CLPlayerView *view = photoView._playerView;
-        [view destroyPlayer];
-        view = nil;
+        
+        [photoView._playerView stop];
+     
     }
     
     
     for (GKPhotoView *photoView in _reusablePhotoViews) {
 
-        CLPlayerView *view = photoView._playerView;
-        [view destroyPlayer];
-        view = nil;
+        [photoView._playerView stop];
     }
 //
 //    [_reusablePhotoViews removeAllObjects];
@@ -805,9 +801,9 @@ NSInteger preindex = -1;
 - (GKPhotoView *)dequeueReusablePhotoView {
     GKPhotoView *photoView = [self.reusablePhotoViews anyObject];
     if (photoView) {
-        CLPlayerView *view = photoView._playerView;
-        [view destroyPlayer];
-        view = nil;
+       
+        [photoView._playerView stop];
+       
         [_reusablePhotoViews removeObject:photoView];
     }else {
         photoView = [[GKPhotoView alloc] initWithFrame:self.photoScrollView.bounds imageProtocol:_imageProtocol];
@@ -923,9 +919,9 @@ NSInteger preindex = -1;
     NSMutableArray *viewsForRemove = [NSMutableArray new];
     for (GKPhotoView *photoView in _visiblePhotoViews) {
         if ((photoView.frame.origin.x + photoView.frame.size.width < self.photoScrollView.contentOffset.x - self.photoScrollView.frame.size.width) || (photoView.frame.origin.x > self.photoScrollView.contentOffset.x + 2 * self.photoScrollView.frame.size.width)) {
-            CLPlayerView *view = photoView._playerView;
-            [view destroyPlayer];
-            view = nil;
+        
+            [photoView._playerView stop];
+           
             [photoView removeFromSuperview];
             GKPhoto *photo = nil;
             [photoView setupPhoto:photo];
@@ -974,31 +970,12 @@ NSInteger preindex = -1;
 
         }
     }
-    
-        GKPhoto *photo = self.photos[i];
+ 
         if (index2 == i) {
             if (preindex != index2) {
-                [_playerView pausePlay];
+                [_playerView pause];
                 preindex = i;
-                if (photo.isVideo) {
-                    _playerView = [self photoViewForIndex:preindex]._playerView;
-                    UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
-                    CGRect screenBounds = [UIScreen mainScreen].bounds;
-                    // 旋转之后是横屏
-                    if (UIDeviceOrientationIsLandscape(currentOrientation)) {
-                        CGRect tempframe = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
-                        _playerView.frame = tempframe;
-                        [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
-                        [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
-                    } else {
-                        CGRect tempframe = CGRectMake(0, 0, MIN(screenBounds.size.width, screenBounds.size.height), MAX(screenBounds.size.width, screenBounds.size.height));
-                        _playerView.frame = tempframe;
-                        [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
-                        [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
-                    }
-
-                    [_playerView resetPlay];
-                }
+                [self currentPlayViewPlay:i];
             }
         }
 
@@ -1020,6 +997,28 @@ NSInteger preindex = -1;
     }
 }
 
+
+-(void)currentPlayViewPlay: (NSInteger)index {
+    GKPhoto *photo = self.photos[index];
+    if (photo.isVideo && _isShow) {
+        _playerView = [self photoViewForIndex:preindex]._playerView;
+        UIDeviceOrientation currentOrientation = [UIDevice currentDevice].orientation;
+        CGRect screenBounds = [UIScreen mainScreen].bounds;
+        // 旋转之后是横屏
+        if (UIDeviceOrientationIsLandscape(currentOrientation)) {
+            CGRect tempframe = CGRectMake(0, 0, MAX(screenBounds.size.width, screenBounds.size.height), MIN(screenBounds.size.width, screenBounds.size.height));
+            _playerView.frame = tempframe;
+            [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
+            [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
+        } else {
+            CGRect tempframe = CGRectMake(0, 0, MIN(screenBounds.size.width, screenBounds.size.height), MAX(screenBounds.size.width, screenBounds.size.height));
+            _playerView.frame = tempframe;
+            [self photoViewForIndex:self.currentIndex -1]._playerView.frame = tempframe;
+            [self photoViewForIndex:self.currentIndex +1]._playerView.frame = tempframe;
+        }
+        [_playerView resetPlay];
+    }
+}
 
 - (GKPhotoView *)photoViewForIndex:(NSInteger)index {
     for (GKPhotoView *photoView in _visiblePhotoViews) {
@@ -1073,9 +1072,8 @@ NSInteger preindex = -1;
 //    int x = point.x;
 //    int y = point.y;
 //    NSLog(@"touch (x, y) is (%d, %d)", x, y);
-
     //在方法内判断
-    if([touch.view isKindOfClass: [CLSlider class] ]) {
+    if([touch.view isKindOfClass: [UISlider class] ]) {
         return NO;
     }
     return YES;
