@@ -12,9 +12,12 @@
  *  支持双击放大图片、拖曳退出浏览等多种手势操作。
 
  说明：本项目是在GKPhotoBrowser基础上修改及扩展的，播放器修改自SBPlayer。本项目保留了GKPhotoBrowser的原有功能（经过修改后原有部分功能可能受到影响，未能一一测试）。
+ 
 GKPhotoBrowser项目地址：https://github.com/QuintGao/GKPhotoBrowser
+
 SBPlayer项目地址：https://github.com/shibiao/SBPlayer_iOS
-##如何使用
+
+## 如何使用
 具体方法详见下载的demo。其他功能或样式可参考GKPhotoBrowser原项目的说明。
 
 ## 下载地址
