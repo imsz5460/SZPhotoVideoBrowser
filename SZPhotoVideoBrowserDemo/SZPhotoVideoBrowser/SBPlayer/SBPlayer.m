@@ -448,9 +448,10 @@ static NSInteger count = 0;
 
 #pragma mark - 重新开始播放
 - (void)resetPlay{
-//    _isEnd = NO;
     [self.item seekToTime:CMTimeMake(0, 1) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+    count = 0;
     [self play];
+    [self.pauseOrPlayView.imageBtn setSelected:YES];
 }
 
 //MARK: SBControlViewDelegate

@@ -957,10 +957,14 @@ NSInteger preindex = -1;
             photoView.frame = CGRectMake(x, y, w, h);
             photoView.tag   = i;
             [self.photoScrollView addSubview:photoView];
-            [photoView addSubview: photoView.playerView];
-            photoView.clipsToBounds = YES;//防止上次的横屏挡住旁边的view
+            
+            GKPhoto *photo = self.photos[i];
+            if (photo.isVideo) {
+                [photoView addSubview: photoView.playerView];
+                photoView.clipsToBounds = YES;//防止上次的横屏挡住旁边的view
+                photoView.playerView.hidden = YES;
+            }
            
-            photoView.playerView.hidden = YES;
             [_visiblePhotoViews addObject:photoView];
 
             [photoView resetFrame];
