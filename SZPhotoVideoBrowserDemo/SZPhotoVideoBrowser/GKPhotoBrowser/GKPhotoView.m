@@ -132,7 +132,7 @@
     _photo = photo;
     
     if (photo.isVideo) {
-        _playerView.hidden = NO;
+//        _playerView.hidden = NO;
         [_playerView assetWithURL:photo.url];
         //设置播放器填充模式 默认SBLayerVideoGravityResizeAspectFill，可以不添加此语句
         _playerView.mode = SBLayerVideoGravityResizeAspect;

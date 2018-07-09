@@ -173,9 +173,6 @@ NSInteger preindex = -1;
         default:
             break;
     }
-    
-//   [photoView setupPhoto:self.photos[self.currentIndex]];
-   
 }
 
 - (void)viewWillLayoutSubviews {
@@ -436,9 +433,7 @@ NSInteger preindex = -1;
 
         [photoView._playerView stop];
     }
-//
-//    [_reusablePhotoViews removeAllObjects];
-//     preindex = 0;
+
 }
 
 - (void)dismissAnimated:(BOOL)animated {
@@ -962,7 +957,7 @@ NSInteger preindex = -1;
             if (photo.isVideo) {
                 [photoView addSubview: photoView.playerView];
                 photoView.clipsToBounds = YES;//防止上次的横屏挡住旁边的view
-                photoView.playerView.hidden = YES;
+//                photoView.playerView.hidden = YES;
             }
            
             [_visiblePhotoViews addObject:photoView];

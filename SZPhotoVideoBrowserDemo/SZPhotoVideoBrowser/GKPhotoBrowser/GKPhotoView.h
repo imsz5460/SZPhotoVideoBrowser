@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**CLplayer*/
 //@property (nonatomic, strong) CLPlayerView *playerView;
 
-/**CLplayer*/
+/**SBPlayer*/
 @property (nonatomic, strong) SBPlayer *playerView;
 /** 是否重新布局 */
 @property (nonatomic, assign) BOOL isLayoutSubViews;
