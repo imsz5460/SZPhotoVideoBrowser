@@ -20,5 +20,4 @@ SBPlayer项目地址：https://github.com/shibiao/SBPlayer_iOS
 ## 如何使用
 具体方法详见下载的demo。其他功能或样式可参考GKPhotoBrowser原项目的说明。
 
-## 下载地址
-https://github.com/imsz5460/SZPhotoVideoBrowser
+
